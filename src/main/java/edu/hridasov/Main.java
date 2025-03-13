@@ -2,50 +2,20 @@ package edu.hridasov;
 
 public class Main {
     public static void main(String[] args) {
-        HumanIMB humanIMB = new HumanIMB(80, 1.52);
-        System.out.println(humanIMB.getResult());
-    }
-}
+        HumanIMB humanIMB = new HumanIMB(65, 1.72);
 
-class HumanIMB {
-    private double weight; // Weight Human
-    private double height; // Height Human
+        // Використання гетерів для отримання значень
+        System.out.println("Weight: " + humanIMB.getWeight());
+        System.out.println("Height: " + humanIMB.getHeight());
 
-    public HumanIMB(double weight, double height) {
-        this.weight = weight;
-        this.height = height;
-    }
+        System.out.println("IMT Result: " + humanIMB.getIMTResult());
 
-    public double getWeight() {
-        return weight;
-    }
+        // Використання сетерів для зміни значень
+        humanIMB.setWeight(70);
+        humanIMB.setHeight(1.75);
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double calculateIMB() {
-        return weight / (height * height);
-    }
-
-    public String getResult() {
-        double imb = calculateIMB();
-        if (imb >= 18.5 && imb < 25) {
-            return "Norm";
-        } else if (imb >= 25 && imb < 30) {
-            return "Warning!";
-        } else if (imb >= 30) {
-            return "Fat";
-        } else {
-            return "Deficit";
-        }
+        System.out.println("Updated Weight: " + humanIMB.getWeight());
+        System.out.println("Updated Height: " + humanIMB.getHeight());
+        System.out.println("Updated IMT Result: " + humanIMB.getIMTResult());
     }
 }
