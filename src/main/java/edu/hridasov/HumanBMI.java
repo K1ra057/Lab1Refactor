@@ -7,11 +7,11 @@ package edu.hridasov;
 @version 1.0.0
 @sinc 13.03.2025 - 22 - 47
 */
-class HumanIMB {
+class HumanBMI {
     private double weight; // Weight in kg
     private double height; // Height in meters
 
-    public HumanIMB(double weight, double height) {
+    public HumanBMI(double weight, double height) {
         this.weight = weight;
         this.height = height;
     }
